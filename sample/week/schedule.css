@@ -1,0 +1,56 @@
+body.schedule
+{
+  background-color: #99ccff;
+  margin-left: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+}
+
+div
+{
+}
+
+.background
+{
+  background-color: #99ccff;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.required{
+   border: 1px solid #666;
+   background-color: white;
+   font-size: 9pt;
+   font-family: verdana;
+}
+
+.tentative{
+   border: 1px solid #666;
+   background-color: #dddddd;
+   font-size: 9pt;
+   font-family: verdana;
+}
+
+.weeklabel{
+   border: 1px solid #000;
+   font-family: verdana;
+   font-size: 9pt;
+   height: 16px;
+   background-color: #ccff99;
+}
+
+table.schedule{
+   border: 1px solid #000;
+   background-color: #ccff99;
+   margin: 0px;
+   padding: 0px;
+}
+
+td.schedule{
+   font-size: 9pt;
+   font-family: verdana;
+   width: 20%;
+}

@@ -1,0 +1,45 @@
+
+CREATE TABLE IF NOT EXISTS user
+(
+ id INT AUTO_INCREMENT,
+ username VARCHAR(255),
+ email VARCHAR(255),
+ password VARCHAR(255),
+ active BOOLEAN DEFAULT TRUE,
+ PRIMARY KEY (id)
+) ENGINE=MYISAM DEFAULT CHARSET=LATIN1;
+
+CREATE TABLE IF NOT EXISTS time_slot
+(
+ tid INT AUTO_INCREMENT,
+ dates int NOT NULL,
+ start_time TIME,
+ end_time TIME,
+ parent VARCHAR(1),
+ schedule_num INT DEFAULT 0,
+ active BOOLEAN DEFAULT FALSE,
+ PRIMARY KEY (tid)
+) ENGINE=MYISAM DEFAULT CHARSET=LATIN1;
+
+SELECT dates, start_time, end_time, parent FROM `time_slot` WHERE active = 1
+
+CREATE TABLE IF NOT EXISTS alarm (
+ aid INT AUTO_INCREMENT,
+ active BOOLEAN DEFAULT TRUE,
+ timer INT NOT NULL,
+ sound VARCHAR(255) NOT NULL,
+ PRIMARY KEY (aid)
+) ENGINE=MYISAM DEFAULT CHARSET=LATIN1;
+
+SELECT active, timer, sound FROM `alarm`
+
+CREATE TABLE IF NOT EXISTS sensitivity (
+ sid INT AUTO_INCREMENT,
+ move_time INT,
+ cry_time INT,
+ PRIMARY KEY (sid)
+) ENGINE=MYISAM DEFAULT CHARSET=LATIN1;
+
+SELECT move_time, cry_time FROM `sensitivity`
+
+
